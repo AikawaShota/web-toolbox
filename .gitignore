@@ -1,4 +1,4 @@
 .DS_Store
 env
 .idea
-./toolbox/toolbox/settings_local.py
+/toolbox/toolbox/settings_local.py
