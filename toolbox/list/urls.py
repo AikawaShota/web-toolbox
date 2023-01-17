@@ -1,8 +1,9 @@
-from django.contrib import admin
 from django.urls import path, include
+from . import views
+
+app_name = 'list'
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('list.urls')),
+    path('', views.index, name='index'),
     path('character_counter', include('character_counter.urls')),
 ]
