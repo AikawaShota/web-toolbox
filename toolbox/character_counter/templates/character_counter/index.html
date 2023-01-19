@@ -1,9 +1,9 @@
-{% extends 'character_counter_base.html' %}
-
+{% extends 'base.html' %}
+{% block title %}Plainly-Character-Counter{% endblock title %}
+{% block logo %}<a href="{% url 'character_counter:counter' %}">Plainly-Character-Counter</a>{% endblock logo %}
 {% block content %}
-<h1>文字数カウント</h1>
 <form action="{% url 'character_counter:counter' %}" method="POST">{% csrf_token %}
-    {{ form.as_p }}
+    {{ form.text }}<br>
     <button type="submit">カウント</button>
     <button onclick="clearText()" type="button">リセット</button>
 </form>

@@ -14,6 +14,24 @@ body {
     height: 100%;
 }
 
+/* ボタンデザイン */
+button {
+    padding: 8px 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    letter-spacing: 0.1em;
+    color: #212529;
+    border: 2px solid #000;
+    border-radius: 0.1rem;
+    background: #fff;
+}
+
+button:hover {
+    color: #fff;
+    background: #000;
+}
+
+
 /*====================
 header
 ====================*/
@@ -21,13 +39,18 @@ header {
     font-family: "Fira Sans", sans-serif;
     background-color: #404040;
     color: #fffff9;
-    padding: 20px;
+    padding: 20px 30px 20px 20px;
     display: flex;
     justify-content: flex-end;
 }
 
 nav, ul, li, .logo {
     display: inline-block;
+}
+
+li>a, .logo>a {
+    text-decoration: none;
+    color: #fffff9;
 }
 
 .logo {
@@ -41,6 +64,12 @@ nav, ul, li, .logo {
 /*====================
 main
 ====================*/
+main {
+    width: 75%;
+    min-width: 800px;
+    margin: 30px auto;
+}
+
 
 /*====================
 footer

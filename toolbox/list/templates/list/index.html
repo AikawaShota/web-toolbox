@@ -1,5 +1,12 @@
-{% extends 'list_base.html' %}
-
+{% extends 'base.html' %}
+{% block title %}Plainly-ToolBox{% endblock title %}
+{% block logo %}<a href="{% url 'list:index' %}">Plainly-ToolBox</a>{% endblock logo %}
 {% block content %}
-<p><a href="{% url 'character_counter:counter' %}">文字数カウント</a></p>
+<table>
+    <tr>
+        <td><a href="{% url 'character_counter:counter' %}">文字数カウント</a></td>
+        <td><a href="{% url 'character_counter:counter' %}">ダミーテキスト生成</a></td>
+    </tr>
+</table>
+
 {% endblock %}
