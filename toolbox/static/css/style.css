@@ -1,0 +1,60 @@
+/* Google fontsの読み込み(Noto Sans JP, Noto Serif JP, Fira Sans) */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital@0;1&family=Noto+Sans+JP&family=Noto+Serif+JP&display=swap');
+
+
+/*====================
+layout
+====================*/
+html {
+    height: 100%;
+}
+
+body {
+    font-family: "Noto Sans JP", serif;
+    height: 100%;
+}
+
+/*====================
+header
+====================*/
+header {
+    font-family: "Fira Sans", sans-serif;
+    background-color: #404040;
+    color: #fffff9;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav, ul, li, .logo {
+    display: inline-block;
+}
+
+.logo {
+    padding: 10px;
+    margin: 0 auto 0 0;
+    font-family: "Fira Sans:ital", "Fira Sans", sans-serif;
+    font-size: 32px;
+    font-style: italic;
+}
+
+/*====================
+main
+====================*/
+
+/*====================
+footer
+====================*/
+footer {
+    color: #fffff9;
+    position: sticky;
+    top: 100vh;
+    width: 100%;
+    background: #404040;
+    padding: 20px;
+}
+
+#copy {
+    margin: 0;
+    text-align: center;
+}

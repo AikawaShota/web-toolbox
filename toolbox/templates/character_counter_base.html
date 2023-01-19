@@ -1,0 +1,32 @@
+<!doctype html>{% load static %}
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'css/sanitize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Plainly-Character-Counter</title>
+</head>
+<body>
+<header>
+    <h1 class="logo">Plainly-Character-Counter</h1>
+    <nav>
+        <ul>
+            <li>ToolBox</li>
+            <li>Character-Counter</li>
+            <li>Filler-Text</li>
+        </ul>
+    </nav>
+</header>
+<main>
+    {% block content %}
+    {% endblock %}
+</main>
+<footer>
+    <p id="copy"><small>&copy; 2023 AikawaShota</small></p>
+</footer>
+<script src="{% static 'js/script.js' %}" defer></script>
+</body>
+</html>
