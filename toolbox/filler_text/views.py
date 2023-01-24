@@ -1,3 +1,5 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def filler_text_view(request):
+    return render(request, 'filler_text/index.html')

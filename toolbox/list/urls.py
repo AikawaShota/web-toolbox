@@ -5,5 +5,6 @@ app_name = 'list'
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('character_counter', include('character_counter.urls')),
+    path('character-counter', include('character_counter.urls')),
+    path('filler-text', include('filler_text.urls')),
 ]

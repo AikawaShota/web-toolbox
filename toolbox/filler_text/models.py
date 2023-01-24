@@ -1,3 +1,7 @@
 from django.db import models
 
-# Create your models here.
+
+class FillerTextModel(models.Model):
+    title = models.CharField(max_length=255)
+    text = models.TextField()
+    original = models.CharField(max_length=255, null=True, blank=True)

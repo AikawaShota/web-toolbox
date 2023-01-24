@@ -2,10 +2,10 @@
 {% block title %}Plainly-ToolBox{% endblock title %}
 {% block logo %}<a href="{% url 'list:index' %}">Plainly-ToolBox</a>{% endblock logo %}
 {% block content %}
-<table>
+<table class="toolbox_table">
     <tr>
-        <td><a href="{% url 'character_counter:counter' %}">文字数カウント</a></td>
-        <td><a href="{% url 'character_counter:counter' %}">ダミーテキスト生成</a></td>
+        <td><a href="{% url 'character_counter:counter' %}"><div class="tool_title"><h3>文字数カウント</h3></div></a></td>
+        <td><a href="{% url 'filler_text:filler_text' %}"><div class="tool_title"><h3>ダミーテキスト生成</h3></div></a></td>
     </tr>
 </table>
 
