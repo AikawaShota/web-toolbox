@@ -2,6 +2,12 @@
 {% block title %}Plainly-Filler-Text{% endblock %}
 {% block logo %}<a href="{% url 'filler_text:filler_text' %}">Plainly-Filler-Text</a>{% endblock %}
 {% block content %}
-<h3>test</h3>
+<h2>ダミーテキスト生成機</h2>
+<form action="{% url 'filler_text:filler_text' %}" method="POST">{% csrf_token %}
+    {{ form.as_p }}<br>
+    <button type="submit">生成</button>
+    <button onclick="clearText()" type="button">リセット</button>
+</form>
+<p>{{ result | linebreaks }}</p>
 
 {% endblock %}

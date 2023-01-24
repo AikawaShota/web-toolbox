@@ -1,5 +1,7 @@
 .DS_Store
-env
 .idea
-/toolbox/toolbox/settings_local.py
+env
+__pycache__/
+settings_local.py
 admin.txt
+

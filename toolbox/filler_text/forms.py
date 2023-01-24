@@ -1,7 +1,7 @@
 from django import forms
 
 
-class SampleChoiceForm(forms.Form):
+class FillerTextForm(forms.Form):
     text = forms.fields.ChoiceField(
         choices=(
             ('alice', '不思議の国のアリス'),
@@ -17,4 +17,5 @@ class SampleChoiceForm(forms.Form):
         required=True,
         widget=forms.widgets.Select
     )
-    count = forms.IntegerField
+    count = forms.IntegerField()
+    no_space = forms.BooleanField(required=False)
