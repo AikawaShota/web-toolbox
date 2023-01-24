@@ -4,7 +4,20 @@
 {% block content %}
 <h2>ダミーテキスト生成機</h2>
 <form action="{% url 'filler_text:filler_text' %}" method="POST">{% csrf_token %}
-    {{ form.as_p }}<br>
+    <table>
+        <tr>
+            <td>テキスト</td>
+            <td>：{{ form.text }}</td>
+        </tr>
+        <tr>
+            <td>文字数</td>
+            <td>：{{ form.count }}</td>
+        </tr>
+        <tr>
+            <td>スペースの有無</td>
+            <td>：{{ form.no_space }}</td>
+        </tr>
+    </table>
     <button type="submit">生成</button>
     <button onclick="clearText()" type="button">リセット</button>
 </form>

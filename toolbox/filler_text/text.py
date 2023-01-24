@@ -31,3 +31,6 @@ def filler_text(text, count, no_space):
         dummy = dummy.replace(" ", "").replace("　", "").replace("\n", "").replace("\t", "")
         result = text_length(dummy, count)
         return result
+    else:
+        result = text_length(dummy, count)
+        return result
