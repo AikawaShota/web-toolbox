@@ -4,4 +4,3 @@ env
 __pycache__/
 settings_local.py
 admin.txt
-
