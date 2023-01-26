@@ -14,13 +14,12 @@
             <td>：{{ form.count }}</td>
         </tr>
         <tr>
-            <td>スペースの有無</td>
+            <td>スペース無し</td>
             <td>：{{ form.no_space }}</td>
         </tr>
     </table>
     <button type="submit">生成</button>
     <button onclick="clearText()" type="button">リセット</button>
 </form>
-<p>{{ result | linebreaks }}</p>
-
+<p><textarea onfocus="this.select();" cols="64" rows="10" readonly class="text_field" placeholder="ここにダミーテキストが生成されます。クリックすると全選択されます。">{{ result }}</textarea></p>
 {% endblock %}
