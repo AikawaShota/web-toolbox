@@ -44,9 +44,9 @@ class GeneratorForm(forms.Form):
     )
     symbol_custom = forms.CharField(
         required=False,
-        widget=forms.CheckboxInput(
+        widget=forms.TextInput(
             attrs={
-                "class": "checkbox_field",
+                "class": "text_field",
             }
         )
     )
