@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'list',
     'character_counter',
     'filler_text',
+    'passwords_generator',
 ]
 
 MIDDLEWARE = [

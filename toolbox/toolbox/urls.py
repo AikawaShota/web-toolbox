@@ -6,4 +6,5 @@ urlpatterns = [
     path('', include('list.urls')),
     path('character-counter', include('character_counter.urls')),
     path('filler-text', include('filler_text.urls')),
+    path('passwords-generator', include('passwords_generator.urls')),
 ]

@@ -14,8 +14,6 @@ class FillerTextForm(forms.Form):
             ('rashomon', '羅生門'),
             ('sample', 'サンプルテキスト'),
         ),
-        required=True,
-        widget=forms.widgets.Select
-    )
-    count = forms.IntegerField()
+        required=True)
+    count = forms.IntegerField(min_value=0)
     no_space = forms.BooleanField(required=False)
