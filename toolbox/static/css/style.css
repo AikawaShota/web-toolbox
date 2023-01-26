@@ -1,112 +1,156 @@
-/* Google fontsの読み込み(Noto Sans JP, Noto Serif JP, Fira Sans) */
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital@0;1&family=Noto+Sans+JP&family=Noto+Serif+JP&display=swap');
-
-
-/*====================
-layout
-====================*/
-html {
-    height: 100%;
-}
-
 body {
-    font-family: "Noto Sans JP", serif;
-    height: 100%;
+  display: flex;
+
+  background-color: #f8f8f8;
+  color: #272727;
+  font-family: sans-serif;
 }
 
-/* ボタンデザイン */
-button {
-    padding: 8px 20px;
-    cursor: pointer;
-    transition: all 0.3s;
-    letter-spacing: 0.1em;
-    color: #212529;
-    border: 2px solid #000;
-    border-radius: 0.1rem;
-    background: #fff;
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: -1px;
 }
 
-button:hover {
-    color: #fff;
-    background: #000;
+h2 {
+  font-size: 1em;
+  font-weight: medium;
 }
 
-td > a {
-    text-decoration: none;
+a,
+a:visited {
+  color: #3d64ed;
 }
 
-.tool_title {
-    width: 300px;
-    height: 200px;
-    padding: 0.5em 1em;
-    margin: 2em 0;
-    font-weight: bold;
-    color: #404040; /*文字色*/
-    background: #FFF;
-    border: solid 3px #404040; /*線*/
-    border-radius: 10px; /*角の丸み*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 50%;
+  max-width: 700px;
+
+  margin-top: 50px;
 }
 
-/*====================
-header
-====================*/
+section {
+  margin-top: 30px;
+}
+
 header {
-    font-family: "Fira Sans", sans-serif;
-    background-color: #404040;
-    color: #fffff9;
-    padding: 20px 30px 20px 20px;
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: fixed;
+  height: 100vh;
+  width: 100px;
+
+  box-sizing: border-box;
+
+  background-color: #eaeaea;
 }
 
-nav, ul, li, .logo {
-    display: inline-block;
+.placeholder {
+  width: 30px;
+  height: 30px;
+
+  margin-top: 30px;
+
+  background-color: #272727;
+  border-radius: 10px;
 }
 
-li > a, .logo > a {
-    text-decoration: none;
-    color: #fffff9;
-}
-
-.logo {
-    padding: 10px;
-    margin: 0 auto 0 0;
-    font-family: "Fira Sans:ital", "Fira Sans", sans-serif;
-    font-size: 32px;
-    font-style: italic;
-}
-
-/*====================
-main
-====================*/
 main {
-    width: 75%;
-    min-width: 800px;
-    margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100vw;
+
+  text-align: center;
 }
 
-.toolbox_table {
-    margin: auto;
-    border-collapse: separate;
-    border-spacing: 30px;
+form {
+  width: 100%;
 }
 
-/*====================
-footer
-====================*/
-footer {
-    color: #fffff9;
-    position: sticky;
-    top: 100vh;
-    width: 100%;
-    background: #404040;
-    padding: 20px;
+textarea {
+  resize: none;
+
+  width: 100%;
+  height: 400px;
+
+  padding: 20px;
+  box-sizing: border-box;
+
+  font-size: 1em;
+  font-weight: normal;
+
+  border: solid 1px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  background-color: #eaeaea;
+
+  font-family: sans-serif;
 }
 
-#copy {
-    margin: 0;
-    text-align: center;
+textarea:focus {
+  outline: none;
+  border: 1px solid #3d64ed;
+}
+
+.primary {
+  margin: 0 15px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+
+  font-size: 1em;
+  font-weight: bold;
+  color: #f8f8f8;
+  line-height: 1em;
+  border: none;
+  border-radius: 10px;
+  background-color: #3d64ed;
+}
+
+.secondary {
+  margin: 0 15px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+
+  font-size: 1em;
+  font-weight: bold;
+  color: #272727;
+  line-height: 1em;
+  border: solid 1px #272727;
+  border-radius: 10px;
+  background-color: #f8f8f8;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  width: 100%;
+
+  table-layout: fixed;
+
+  text-align: left;
+}
+
+td {
+  padding: 15px 10px;
+}
+
+.right {
+  text-align: right;
+}
+
+span {
+  margin-right: 20px;
+
+  font-size: 2rem;
+  font-weight: bold;
 }
