@@ -3,7 +3,7 @@ body {
 
   background-color: #f8f8f8;
   color: #272727;
-  font-family: sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 h1 {
@@ -37,6 +37,10 @@ div {
 
 section {
   margin-top: 30px;
+}
+
+p {
+  line-height: 3rem;
 }
 
 header {
@@ -185,13 +189,9 @@ select {
   appearance: none;
 }
 
-select::after {
-  background-color: #3d64ed;
-  content: "";
-  position: absolute;
-  right: 0;
-  height: 10px;
-  width: 10px;
+select:focus {
+  border: 1px solid #3d64ed;
+  outline: none;
 }
 
 input {
@@ -218,6 +218,11 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+input:focus {
+  border: 1px solid #3d64ed;
+  outline: none;
+}
+
 .index-icon {
   font-size: 64px;
   line-height: 64px;
@@ -234,5 +239,8 @@ input::-webkit-inner-spin-button {
 
 .toolbox_table {
   text-align: center;
-  border-spacing: 30px;
+}
+
+.toolbox_table tr td {
+  padding: 30px 0px;
 }
