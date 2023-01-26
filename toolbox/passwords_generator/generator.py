@@ -10,22 +10,19 @@ eisu.extend([chr(i) for i in range(48, 48+10)])
 symbol_normal_list = [chr(i) for i in range(33, 127) if chr(i) not in eisu]
 
 
-# 因みに「33」を「32」にすると半角空白が入る
-
 def generator(count, number, upper, lower, symbol_normal, symbol_custom):
-    dic = {}
+    character_list = []
     result = ""
     if number:
-        dic["number"] = number_list
+        character_list.extend(number_list)
     if upper:
-        dic["upper"] = upper_list
+        character_list.extend(upper_list)
     if lower:
-        dic["lower"] = lower_list
+        character_list.extend(lower_list)
     if symbol_normal:
-        dic["symbol_normal"] = symbol_normal_list
+        character_list.extend(symbol_normal_list)
     if symbol_custom:
-        dic["symbol_custom"] = list(symbol_custom)
+        character_list.extend(list(symbol_custom))
     for i in range(count):
-        key, item = random.choice(list(dic.items()))
-        result += str(random.choice(item))
+        result += str(random.choice(character_list))
     return result
