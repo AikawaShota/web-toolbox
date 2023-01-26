@@ -3,7 +3,28 @@
 {% block logo %}<a href="{% url 'passwords_generator:passwords_generator' %}">Plainly-Passwords-Generator</a>{% endblock %}
 {% block content %}
 <form action="{% url 'passwords_generator:passwords_generator' %}" method="POST">{% csrf_token %}
-    {{ form.as_p }}
+    <table>
+        <tr>
+            <td>パスワードの長さ</td>
+            <td>{{ form.count }}</td>
+        </tr>
+        <tr>
+            <td>数字を含める</td>
+            <td>{{ form.number }}</td>
+        </tr>
+        <tr>
+            <td>英大文字を含める</td>
+            <td>{{ form.upper }}</td>
+        </tr>
+        <tr>
+            <td>記号を含める</td>
+            <td>{{ form.symbol_normal }}</td>
+        </tr>
+        <tr>
+            <td>カスタム文字</td>
+            <td>{{ form.symbol_custom }}</td>
+        </tr>
+    </table>
     <button type="submit">生成</button>
 </form>
 <p>結果：{{ result }}</p>
