@@ -20,6 +20,6 @@ def passwords_generator_view(request):
                 'form': form,
                 'result': result,
             }
-            return render(request, 'filler_text/index.html', context)
+            return render(request, 'passwords_generator/index.html', context)
     context = {'form': form}
-    return render(request, 'filler_text/index.html', context)
+    return render(request, 'passwords_generator/index.html', context)

@@ -2,5 +2,9 @@
 {% block title %}Plainly-Passwords-Generator{% endblock %}
 {% block logo %}<a href="{% url 'passwords_generator:passwords_generator' %}">Plainly-Passwords-Generator</a>{% endblock %}
 {% block content %}
-<p>テスト</p>
+<form action="{% url 'passwords_generator:passwords_generator' %}" method="POST">{% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">生成</button>
+</form>
+<p>結果：{{ result }}</p>
 {% endblock %}
