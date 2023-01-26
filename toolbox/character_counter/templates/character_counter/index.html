@@ -1,24 +1,37 @@
-{% extends 'base.html' %}
-{% block title %}Plainly-Character-Counter{% endblock title %}
-{% block logo %}<a href="{% url 'character_counter:counter' %}">Plainly-Character-Counter</a>{% endblock logo %}
-{% block content %}
-<form action="{% url 'character_counter:counter' %}" method="POST">{% csrf_token %}
-    {{ form.text }}<br>
-    <button type="submit">カウント</button>
-    <button onclick="clearText()" type="button">リセット</button>
-</form>
-<table>
+{% extends 'base.html' %} {% block content %}
+
+<div>
+  <h1>Character Counter</h1>
+  <h2>文字数カウンタ</h2>
+</div>
+
+<div>
+  <form action="{% url 'character_counter:counter' %}" method="POST">
+    {% csrf_token %} {{ form.text }}
+    <section class="buttons">
+      <button type="submit" class="primary">カウント</button>
+      <button onclick="clearText()" type="button" class="secondary">
+        リセット
+      </button>
+    </section>
+  </form>
+</div>
+
+<div>
+  <table>
     <tr>
-        <td>文字数（改行、スペース込み）</td>
-        <td>：<input type="number" value="{{ number_of_character }}" class="text_field" readonly></td>
+      <td class="right">合計</td>
+      <td><span>{{ no_space }}</span>文字</td>
     </tr>
     <tr>
-        <td>文字数（改行、スペース除く）</td>
-        <td>：<input type="number" value="{{ no_space }}" class="text_field" readonly></td>
+      <td class="right">改行、スペース込み</td>
+      <td><span>{{ number_of_character }}</span>文字</td>
     </tr>
     <tr>
-        <td>原稿用紙換算（400字詰めn枚）</td>
-        <td>：<input type="number" value="{{ manuscript_paper }}" class="text_field" readonly></td>
+      <td class="right">原稿用紙（400字詰）</td>
+      <td><span>{{ manuscript_paper }}</span>枚分</td>
     </tr>
-</table>
+  </table>
+</div>
+
 {% endblock %}
