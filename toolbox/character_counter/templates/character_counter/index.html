@@ -1,5 +1,12 @@
 {% extends 'base.html' %} {% block content %}
 
+<script>
+    window.onload = (function () {
+    let apps = document.getElementsByName("app");
+    apps[1].checked = true;
+  })();
+</script>
+
 <div>
   <h3 class="index-icon">📑</h3>
   <h1>Character Counter</h1>
@@ -22,15 +29,25 @@
   <table>
     <tr>
       <td class="right">合計</td>
-      <td><span>{{ no_space }}{% if no_space is none %}0{% endif %}</span>文字</td>
+      <td>
+        <span>{{ no_space }}{% if no_space is none %}0{% endif %}</span>文字
+      </td>
     </tr>
     <tr>
       <td class="right">改行、スペース込み</td>
-      <td><span>{{ number_of_character }}{% if number_of_character is none %}0{% endif %}</span>文字</td>
+      <td>
+        <span
+          >{{ number_of_character }}{% if number_of_character is none %}0{% endif %}</span
+        >文字
+      </td>
     </tr>
     <tr>
       <td class="right">原稿用紙（400字詰）</td>
-      <td><span>{{ manuscript_paper }}{% if manuscript_paper is none %}0{% endif %}</span>枚分</td>
+      <td>
+        <span
+          >{{ manuscript_paper }}{% if manuscript_paper is none %}0{% endif %}</span
+        >枚分
+      </td>
     </tr>
   </table>
 </div>
