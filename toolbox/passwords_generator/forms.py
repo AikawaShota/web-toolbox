@@ -2,9 +2,51 @@ from django import forms
 
 
 class GeneratorForm(forms.Form):
-    count = forms.IntegerField(min_value=4)
-    number = forms.BooleanField(required=False)
-    upper = forms.BooleanField(required=False)
-    lower = forms.BooleanField(required=False)
-    symbol_normal = forms.BooleanField(required=False)
-    symbol_custom = forms.CharField(required=False)
+    count = forms.IntegerField(
+        min_value=4,
+        widget=forms.NumberInput(
+            attrs={
+                "class": "number_field",
+            }
+        )
+    )
+    number = forms.BooleanField(
+        required=False,
+        widget=forms.CheckboxInput(
+            attrs={
+                "class": "checkbox_field",
+            }
+        )
+    )
+    upper = forms.BooleanField(
+        required=False,
+        widget=forms.CheckboxInput(
+            attrs={
+                "class": "checkbox_field",
+            }
+        )
+    )
+    lower = forms.BooleanField(
+        required=False,
+        widget=forms.CheckboxInput(
+            attrs={
+                "class": "checkbox_field",
+            }
+        )
+    )
+    symbol_normal = forms.BooleanField(
+        required=False,
+        widget=forms.CheckboxInput(
+            attrs={
+                "class": "checkbox_field",
+            }
+        )
+    )
+    symbol_custom = forms.CharField(
+        required=False,
+        widget=forms.CheckboxInput(
+            attrs={
+                "class": "checkbox_field",
+            }
+        )
+    )
