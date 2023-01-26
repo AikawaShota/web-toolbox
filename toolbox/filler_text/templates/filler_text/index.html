@@ -22,7 +22,6 @@
 </div>
 
 <div>
-  <textarea placeholder="生成したテキストが表示されます">{{ result }}</textarea>
+  <textarea onfocus="this.select();" cols="64" rows="10" readonly class="text_field" placeholder="ここにダミーテキストが生成されます。クリックすると全選択されます。">{{ result }}</textarea>
 </div>
-
 {% endblock %}

@@ -20,6 +20,7 @@ class FillerTextForm(forms.Form):
         widget=forms.NumberInput(
             attrs={
                 'class': 'number_field',
+                'value': '0',
             }
         )
     )
