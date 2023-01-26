@@ -1,4 +1,11 @@
 {% extends 'base.html' %} {% block content %}
+<script>
+  window.onload = (function () {
+    let apps = document.getElementsByName("app");
+    apps[0].checked = true;
+  })();
+</script>
+
 <div>
   <h3 class="index-icon">🧰</h3>
   <h1>Plainly Web ToolBox</h1>

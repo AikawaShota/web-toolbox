@@ -1,5 +1,12 @@
 {% extends 'base.html' %} {% block content %}
 
+<script>
+    window.onload = (function () {
+    let apps = document.getElementsByName("app");
+    apps[2].checked = true;
+  })();
+</script>
+
 <div>
   <h3 class="index-icon">📕</h3>
   <h1>Dummy Text Generator</h1>
@@ -22,6 +29,15 @@
 </div>
 
 <div>
-  <textarea onfocus="this.select();" cols="64" rows="10" readonly class="text_field" placeholder="ここにダミーテキストが生成されます。クリックすると全選択されます。">{{ result }}</textarea>
+  <textarea
+    onfocus="this.select();"
+    cols="64"
+    rows="10"
+    readonly
+    class="text_field"
+    placeholder="ダミーテキストがここに生成されます"
+  >
+{{ result }}</textarea
+  >
 </div>
 {% endblock %}
