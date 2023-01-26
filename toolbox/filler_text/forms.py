@@ -15,5 +15,19 @@ class FillerTextForm(forms.Form):
             ('sample', 'サンプルテキスト'),
         ),
         required=True)
-    count = forms.IntegerField(min_value=0)
-    no_space = forms.BooleanField(required=False)
+    count = forms.IntegerField(
+        min_value=0,
+        widget=forms.NumberInput(
+            attrs={
+                'class': 'number_field',
+            }
+        )
+    )
+    no_space = forms.ChoiceField(
+        choices=(
+            (0, '有'),
+            (1, '無'),
+        ),
+        widget=forms.Select(),
+        required=True,
+    )
