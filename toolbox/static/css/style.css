@@ -13,6 +13,8 @@ h1 {
 }
 
 h2 {
+  margin-top: 10px;
+
   font-size: 1em;
   font-weight: medium;
 }
@@ -61,6 +63,14 @@ header {
   border-radius: 10px;
 }
 
+.icons {
+  font-size: 24px;
+  line-height: 30px;
+  margin-top: 30px;
+
+  text-decoration: none;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -100,17 +110,21 @@ textarea:focus {
 }
 
 .primary {
+  transition: background-color ease 0.1s;
+
   margin: 0 15px;
   padding: 10px 20px;
   box-sizing: border-box;
+
+  border: none;
+  border-radius: 10px;
+  background-color: #3d64ed;
+  filter: drop-shadow(0 4px 4px rgba(61, 100, 237, 0.5));
 
   font-size: 1em;
   font-weight: bold;
   color: #f8f8f8;
   line-height: 1em;
-  border: none;
-  border-radius: 10px;
-  background-color: #3d64ed;
 }
 
 .secondary {
@@ -153,4 +167,72 @@ span {
 
   font-size: 2rem;
   font-weight: bold;
+}
+
+select {
+  width: max-content;
+
+  padding: 10px 20px;
+  box-sizing: border-box;
+
+  font-size: 1em;
+  color: #272727;
+  line-height: 1rem;
+
+  border: solid 1px #272727;
+  border-radius: 10px;
+  background-color: #f8f8f8;
+  appearance: none;
+}
+
+select::after {
+  background-color: #3d64ed;
+  content: "";
+  position: absolute;
+  right: 0;
+  height: 10px;
+  width: 10px;
+}
+
+input {
+  width: 25%;
+  height: 38px;
+
+  padding: 10px 20px;
+  box-sizing: border-box;
+
+  font-size: 1em;
+  color: #272727;
+  line-height: 1rem;
+
+  border: solid 1px #272727;
+  border-radius: 10px;
+  background-color: #f8f8f8;
+
+  appearance: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.index-icon {
+  font-size: 64px;
+  line-height: 64px;
+  margin-bottom: 10px;
+
+  text-decoration: none;
+}
+
+.list-icon,
+.list-icon:visited {
+  text-decoration: none;
+  color: #272727;
+}
+
+.toolbox_table {
+  text-align: center;
+  border-spacing: 30px;
 }
