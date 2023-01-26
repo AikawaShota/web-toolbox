@@ -3,7 +3,6 @@
 <!DOCTYPE html>
 
 <html lang="ja">
-
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -14,22 +13,36 @@
     <link rel="stylesheet" href="{% static 'css/sanitize.css' %}" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <title>{% block title %}{% endblock title %}</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
     <header>
-      <a href="{% url 'list:index' %}" class="icons">🧰</a></li>
-      <a href="{% url 'character_counter:counter' %}" class="icons">📑</a>
-    	<a href="{% url 'filler_text:filler_text' %}" class="icons">📕</a>
-      <a class="icons">🔐</a>
+      <input type="radio" name="app" id="top" value="top" disabled/>
+      <label for="top"
+        ><a href="{% url 'list:index' %}" class="icons">🧰</a></label
+      >
+      <input type="radio" name="app" id="charcount" value="charcount" disabled/>
+      <label for="charcount"
+        ><a href="{% url 'character_counter:counter' %}" class="icons"
+          >📑</a
+        ></label
+      >
+      <input type="radio" name="app" id="dummytext" value="dummytext" disabled/>
+      <label for="dummytext"
+        ><a href="{% url 'filler_text:filler_text' %}" class="icons"
+          >📕</a
+        ></label
+      >
     </header>
 
     <main>{% block content %} {% endblock %}</main>
-    
+
     <script src="{% static 'js/script.js' %}" defer></script>
   </body>
-
 </html>

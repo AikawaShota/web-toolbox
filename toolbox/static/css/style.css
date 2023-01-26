@@ -70,7 +70,6 @@ header {
 .icons {
   font-size: 24px;
   line-height: 30px;
-  margin-top: 30px;
 
   text-decoration: none;
 }
@@ -196,7 +195,7 @@ select:focus {
   outline: none;
 }
 
-input {
+.number_field {
   width: 25%;
   height: 38px;
 
@@ -214,13 +213,13 @@ input {
   appearance: none;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+.number_field::-webkit-outer-spin-button,
+.number_field::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-input:focus {
+.number_field:focus {
   border: 1px solid #3d64ed;
   outline: none;
 }
@@ -245,4 +244,26 @@ input:focus {
 
 .toolbox_table tr td {
   padding: 30px 0px;
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+input[type="radio"]:checked + label {
+  background-color: #f8f8f8;
+}
+
+label {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
 }
