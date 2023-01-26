@@ -212,6 +212,13 @@ input {
   appearance: none;
 }
 
+/* チェックボックスがinputタグのCSSに塗りつぶされており動作確認ができないため勝手に追加しました。ー相川 */
+/* チェックボックスが使える形なら自由に書き換えて頂いて結構です。（というか相川のデザインだとダサいので書き換えて頂けるとありがたいです。） */
+input[type=checkbox] {
+  appearance: auto;
+}
+/* ー相川が勝手に追加した部分終わり */
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
