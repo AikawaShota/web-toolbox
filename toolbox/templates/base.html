@@ -18,12 +18,15 @@
 
   <body>
     <header>
-      <a href="{% url 'list:index' %}"><img class="placeholder"></a></li>
-      <a href="{% url 'character_counter:counter' %}"><img class="placeholder"></a>
-    	<a href="{% url 'filler_text:filler_text' %}"><img class="placeholder"></a>
+      <a href="{% url 'list:index' %}" class="icons">🧰</a></li>
+      <a href="{% url 'character_counter:counter' %}" class="icons">📑</a>
+    	<a href="{% url 'filler_text:filler_text' %}" class="icons">📕</a>
+      <a class="icons">🔐</a>
     </header>
+
     <main>{% block content %} {% endblock %}</main>
+    
     <script src="{% static 'js/script.js' %}" defer></script>
   </body>
-  
+
 </html>

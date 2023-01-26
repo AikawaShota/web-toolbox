@@ -1,15 +1,37 @@
-{% extends 'base.html' %}
-{% block title %}Plainly-ToolBox{% endblock title %}
-{% block logo %}<a href="{% url 'list:index' %}">Plainly-ToolBox</a>{% endblock logo %}
-{% block content %}
-<table class="toolbox_table">
+{% extends 'base.html' %} {% block content %}
+<div>
+  <h3 class="index-icon">🧰</h3>
+  <h1>Plainly Web ToolBox</h1>
+  <h2>🛠️Tools for every Web Devs💪</h2>
+</div>
+
+<div>
+  <table class="toolbox_table">
     <tr>
-        <td><a href="{% url 'character_counter:counter' %}"><div class="tool_title"><h3>文字数カウント</h3></div></a></td>
-        <td><a href="{% url 'filler_text:filler_text' %}"><div class="tool_title"><h3>ダミーテキスト生成</h3></div></a></td>
+      <td>
+        <a href="{% url 'character_counter:counter' %}" class="list-icon"
+          ><h3 class="index-icon">📑</h3>
+          <p>文字数カウンタ</p></a
+        >
+      </td>
+      <td>
+        <a href="{% url 'filler_text:filler_text' %}" class="list-icon"
+          ><h3 class="index-icon">📕</h3>
+          <p>ダミーテキストジェネレータ</p></a
+        >
+      </td>
     </tr>
     <tr>
-        <td><a href="{% url 'passwords_generator:passwords_generator' %}"><div class="tool_title"><h3>パスワード生成機</h3></div></a></td>
+      <td>
+        <a
+          href="{% url 'passwords_generator:passwords_generator' %}"
+          class="list-icon"
+          ><h3 class="index-icon">🔐</h3>
+          <p>パスワードジェネレータ</p></a
+        >
+      </td>
     </tr>
-</table>
+  </table>
+</div>
 
 {% endblock %}

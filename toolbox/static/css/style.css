@@ -63,6 +63,14 @@ header {
   border-radius: 10px;
 }
 
+.icons {
+  font-size: 24px;
+  line-height: 30px;
+  margin-top: 30px;
+
+  text-decoration: none;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -168,7 +176,6 @@ select {
   box-sizing: border-box;
 
   font-size: 1em;
-  font-weight: bold;
   color: #272727;
   line-height: 1rem;
 
@@ -195,7 +202,6 @@ input {
   box-sizing: border-box;
 
   font-size: 1em;
-  font-weight: bold;
   color: #272727;
   line-height: 1rem;
 
@@ -210,4 +216,23 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.index-icon {
+  font-size: 64px;
+  line-height: 64px;
+  margin-bottom: 10px;
+
+  text-decoration: none;
+}
+
+.list-icon,
+.list-icon:visited {
+  text-decoration: none;
+  color: #272727;
+}
+
+.toolbox_table {
+  text-align: center;
+  border-spacing: 30px;
 }
