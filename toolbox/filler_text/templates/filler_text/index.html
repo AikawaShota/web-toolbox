@@ -1,26 +1,28 @@
-{% extends 'base.html' %}
-{% block title %}Plainly-Filler-Text{% endblock %}
-{% block logo %}<a href="{% url 'filler_text:filler_text' %}">Plainly-Filler-Text</a>{% endblock %}
-{% block content %}
-<h2>ダミーテキスト生成機</h2>
-<form action="{% url 'filler_text:filler_text' %}" method="POST">{% csrf_token %}
-    <table>
-        <tr>
-            <td>テキスト</td>
-            <td>：{{ form.text }}</td>
-        </tr>
-        <tr>
-            <td>文字数</td>
-            <td>：{{ form.count }}</td>
-        </tr>
-        <tr>
-            <td>スペースの有無</td>
-            <td>：{{ form.no_space }}</td>
-        </tr>
-    </table>
-    <button type="submit">生成</button>
-    <button onclick="clearText()" type="button">リセット</button>
-</form>
-<p>{{ result | linebreaks }}</p>
+{% extends 'base.html' %} {% block content %}
+
+<div>
+  <h1>Dummy Text Generator</h1>
+  <h2>ダミーテキスト生成機</h2>
+</div>
+
+<div>
+  <form action="{% url 'filler_text:filler_text' %}" method="POST">
+    {% csrf_token %}
+    <p>
+      {{ form.text }} より {{ form.count }} 文字<br />
+      (空白{{ form.no_space }})
+    </p>
+    <section class="buttons">
+      <button class="primary" type="submit">生成</button>
+      <button class="secondary" onclick="clearText()" type="button">
+        リセット
+      </button>
+    </section>
+  </form>
+</div>
+
+<div>
+  <textarea>{{ result }}</textarea>
+</div>
 
 {% endblock %}
