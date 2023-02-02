@@ -25,17 +25,17 @@
     <header class="sidebar">
       <input type="radio" name="app" value="top" disabled />
       <label for="top"
-        ><a href="{% url 'list:index' %}" class="icons">🧰</a></label
+        ><a href="{% url 'list:index' %}" class="icons" title="Top">🧰</a></label
       >
       <input type="radio" name="app" value="charcount" disabled />
       <label for="charcount"
-        ><a href="{% url 'character_counter:counter' %}" class="icons"
+        ><a href="{% url 'character_counter:counter' %}" class="icons" title="Character Counter"
           >📑</a
         ></label
       >
       <input type="radio" name="app" value="dummytext" disabled />
       <label for="dummytext"
-        ><a href="{% url 'filler_text:filler_text' %}" class="icons"
+        ><a href="{% url 'filler_text:filler_text' %}" class="icons" title="Dummy Text Generator"
           >📘</a
         ></label
       >
@@ -43,11 +43,11 @@
       <label for="password"
         ><a
           href="{% url 'passwords_generator:passwords_generator' %}"
-          class="icons"
+          class="icons" title="Password Generator"
           >🔐</a
         ></label
       >
-      <a class="github" href="https://github.com/AikawaShota/web-toolbox">
+      <a class="github" href="https://github.com/AikawaShota/web-toolbox" target="_blank" rel="noreferrer noopener">
         <svg viewBox="0 0 635 619" xmlns="http://www.w3.org/2000/svg">
           <path
             fill-rule="evenodd"
