@@ -1,26 +1,21 @@
 from django import forms
+from .models import FillerTextModel
+
+value_list = [x[0] for x in list(FillerTextModel.objects.all().values_list("value"))]
+name_list = [x[0] for x in list(FillerTextModel.objects.all().values_list("name"))]
+choices_tuple = tuple(zip(value_list, name_list))
 
 
 class FillerTextForm(forms.Form):
     text = forms.fields.ChoiceField(
-        choices=(
-            ('alice', '不思議の国のアリス'),
-            ('constitution_of_japan', '日本国憲法'),
-            ('dagon', 'ダゴン'),
-            ('frankenstein', 'フランケンシュタイン'),
-            ('lorem_ipsum', 'lorem'),
-            ('lorem_ipsum_upper', 'lorem（大文字）'),
-            ('pangram', 'パングラム'),
-            ('rashomon', '羅生門'),
-            ('sample', 'サンプルテキスト'),
-        ),
+        choices=choices_tuple,
         required=True)
     count = forms.IntegerField(
         min_value=0,
         widget=forms.NumberInput(
             attrs={
                 'class': 'number_field',
-                'value': '500',
+                'value': '200',
             }
         )
     )
