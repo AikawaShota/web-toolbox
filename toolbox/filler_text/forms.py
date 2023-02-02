@@ -20,6 +20,10 @@ class FillerTextForm(forms.Form):
         )
     )
     no_space = forms.BooleanField(
-        widget=forms.CheckboxInput(),
+        widget=forms.CheckboxInput(
+            attrs={
+                'id': 'space'
+            }
+        ),
         required=False,
     )

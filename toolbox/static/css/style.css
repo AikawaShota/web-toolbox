@@ -331,3 +331,13 @@ input[type="radio"]:checked + label {
   width: 50px;
   height: 50px;
 }
+
+.code {
+  width: 750px !important;
+  text-align: center !important;
+
+  background-color: #eaeaea !important;
+  border: rgba(0, 0, 0, 0.25) 1px solid !important;
+  font-family: 'JetBrains Mono';
+  font-variant-ligatures: none;
+}
