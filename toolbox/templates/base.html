@@ -22,7 +22,7 @@
   </head>
 
   <body>
-    <header>
+    <header class="sidebar">
       <input type="radio" name="app" value="top" disabled/>
       <label for="top"
         ><a href="{% url 'list:index' %}" class="icons">🧰</a></label
@@ -41,7 +41,7 @@
       >
       <input type="radio" name="app" value="password" disabled/>
       <label for="password"
-        ><a href="{% url 'filler_text:filler_text' %}" class="icons"
+        ><a href="{% url 'passwords_generator:passwords_generator' %}" class="icons"
           >🔐</a
         ></label
       >
