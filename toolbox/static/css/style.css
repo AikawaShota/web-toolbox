@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
+
 body {
   display: flex;
 
@@ -347,11 +349,41 @@ input[type="text"]:hover {
 }
 
 .index-icon {
+  transition: all ease 0.3s;
   font-size: 64px;
   line-height: 64px;
   margin-bottom: 10px;
 
   text-decoration: none;
+  cursor: pointer;
+}
+
+.index-icon:hover {
+  z-index: 99999;
+  font-size: 96px;
+  animation-duration: 1s;
+  animation-name: shake;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0);
+  }
+  20% {
+    transform: rotate(-5deg);
+  }
+  40% {
+    transform: rotate(4deg);
+  }
+  60% {
+    transform: rotate(-3deg);
+  }
+  80% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(-1deg);
+  }
 }
 
 .list-icon,
@@ -360,12 +392,15 @@ input[type="text"]:hover {
   color: #272727;
 }
 
-.list-icon h3, .list-icon p {
+.list-icon h3,
+.list-icon p {
   transition: all ease 0.3s;
 }
 
 .list-icon:hover h3 {
   font-size: 96px;
+  animation-duration: 1s;
+  animation-name: shake;
 }
 
 .list-icon:hover p {
@@ -392,6 +427,18 @@ input[type="radio"]:checked + label {
   background-color: #f8f8f8;
 }
 
+input[type="radio"] + label a {
+  transition: all ease 0.3s;
+}
+
+input[type="radio"] + label a:hover {
+  font-size: 32px;
+}
+
+input[type="radio"]:checked + label a {
+  font-size: 32px;
+}
+
 .sidebar label {
   margin-top: 10px;
   display: flex;
@@ -408,7 +455,7 @@ input[type="radio"]:checked + label {
 
   background-color: #eaeaea !important;
   border: rgba(0, 0, 0, 0.25) 1px solid !important;
-  font-family: "JetBrains Mono";
+  font-family: "JetBrains Mono", monospace;
   font-variant-ligatures: none;
   cursor: pointer;
 }
@@ -420,12 +467,21 @@ input[type="radio"]:checked + label {
 .github {
   transition: all ease 0.3s;
   width: 24px;
-  height: fit;
+  height: 24px;
   position: absolute;
   bottom: 24px;
 }
 
+.github svg {
+  transition: all ease 0.3s;
+}
+
 .github:hover {
+  bottom: 32px;
+}
+
+.github:hover svg {
+  transform: scale(1.5);
   fill: #3d64ed;
   filter: drop-shadow(0 4px 4px rgba(61, 100, 237, 0.5));
 }
