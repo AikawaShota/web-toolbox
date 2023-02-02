@@ -10,7 +10,7 @@ def filler_text_view(request):
         if form.is_valid():
             text = form.cleaned_data["text"]
             count = form.cleaned_data["count"]
-            no_space = bool(int(form.cleaned_data["no_space"]))
+            no_space = form.cleaned_data["no_space"]
             result = filler_text(text, count, no_space)
             context = {
                 'form': form,

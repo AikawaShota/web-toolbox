@@ -19,11 +19,7 @@ class FillerTextForm(forms.Form):
             }
         )
     )
-    no_space = forms.ChoiceField(
-        choices=(
-            (0, '有'),
-            (1, '無'),
-        ),
-        widget=forms.Select(),
-        required=True,
+    no_space = forms.BooleanField(
+        widget=forms.CheckboxInput(),
+        required=False,
     )
