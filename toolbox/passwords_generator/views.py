@@ -15,7 +15,10 @@ def passwords_generator_view(request):
             lower = form.cleaned_data["lower"]
             symbol_normal = form.cleaned_data["symbol_normal"]
             symbol_custom = form.cleaned_data["symbol_custom"]
-            result = generator(count, number, upper, lower, symbol_normal, symbol_custom)
+            try:
+                result = generator(count, number, upper, lower, symbol_normal, symbol_custom)
+            except IndexError:
+                result = "生成エラー。全てのチェックボックスが空だと生成できません。"
             context = {
                 'form': form,
                 'result': result,
