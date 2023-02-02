@@ -15,6 +15,7 @@ class GeneratorForm(forms.Form):
         widget=forms.CheckboxInput(
             attrs={
                 "class": "checkbox_field",
+                "id": "number",
             }
         )
     )
@@ -23,6 +24,7 @@ class GeneratorForm(forms.Form):
         widget=forms.CheckboxInput(
             attrs={
                 "class": "checkbox_field",
+                "id": "upper",
             }
         )
     )
@@ -31,6 +33,7 @@ class GeneratorForm(forms.Form):
         widget=forms.CheckboxInput(
             attrs={
                 "class": "checkbox_field",
+                "id": "lower",
             }
         )
     )
@@ -39,6 +42,7 @@ class GeneratorForm(forms.Form):
         widget=forms.CheckboxInput(
             attrs={
                 "class": "checkbox_field",
+                "id": "symbol-normal",
             }
         )
     )

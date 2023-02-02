@@ -1,35 +1,105 @@
-{% extends 'base.html' %}
-{% block title %}Plainly-Passwords-Generator{% endblock %}
-{% block logo %}<a href="{% url 'passwords_generator:passwords_generator' %}">Plainly-Passwords-Generator</a>{% endblock %}
-{% block content %}
-<form action="{% url 'passwords_generator:passwords_generator' %}" method="POST">{% csrf_token %}
+{% extends 'base.html' %} {% block content %}
+<script>
+  window.onload = (function () {
+    let apps = document.getElementsByName("app");
+    apps[3].checked = true;
+  })();
+</script>
+
+<div>
+  <h3 class="index-icon">🔐</h3>
+  <h1>Password Generator</h1>
+  <h2>パスワードジェネレータ</h2>
+</div>
+
+<div>
+  <form
+    action="{% url 'passwords_generator:passwords_generator' %}"
+    method="POST"
+  >
+    {% csrf_token %}
     <table>
-        <tr>
-            <td>パスワードの長さ</td>
-            <td>{{ form.count }}</td>
-        </tr>
-        <tr>
-            <td>数字を含める</td>
-            <td>{{ form.number }}</td>
-        </tr>
-        <tr>
-            <td>英小文字を含める</td>
-            <td>{{ form.lower }}</td>
-        </tr>
-        <tr>
-            <td>英大文字を含める</td>
-            <td>{{ form.upper }}</td>
-        </tr>
-        <tr>
-            <td>記号を含める</td>
-            <td>{{ form.symbol_normal }}</td>
-        </tr>
-        <tr>
-            <td>カスタム文字</td>
-            <td>{{ form.symbol_custom }}</td>
-        </tr>
+      <tr>
+        <td class="right">パスワードの長さ</td>
+        <td>{{ form.count }}</td>
+      </tr>
+      <tr>
+        <td class="right">数字を含める</td>
+        <td>
+          {{ form.number }}
+          <label for="number" class="checkbox">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-check"
+            >
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </label>
+        </td>
+      </tr>
+      <tr>
+        <td class="right">英大文字を含める</td>
+        <td>
+          {{ form.upper }}
+          <label for="upper" class="checkbox">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-check"
+            >
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </label>
+        </td>
+      </tr>
+      <tr>
+        <td class="right">記号を含める</td>
+        <td>
+          {{ form.symbol_normal }}
+          <label for="symbol-normal" class="checkbox">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-check"
+            >
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </label>
+        </td>
+      </tr>
+      <tr>
+        <td class="right">カスタム文字</td>
+        <td>{{ form.symbol_custom }}</td>
+      </tr>
     </table>
-    <button type="submit">生成</button>
-</form>
-<p>結果：{{ result }}</p>
-{% endblock %}
+    <section>
+      <button type="submit" class="primary">生成</button>
+    </section>
+  </form>
+</div>
+<div>
+  <p>結果：{{ result }}</p>
+  {% endblock %}
+</div>

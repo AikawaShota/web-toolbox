@@ -22,21 +22,27 @@
   </head>
 
   <body>
-    <header>
-      <input type="radio" name="app" id="top" value="top" disabled/>
+    <header class="sidebar">
+      <input type="radio" name="app" value="top" disabled/>
       <label for="top"
         ><a href="{% url 'list:index' %}" class="icons">🧰</a></label
       >
-      <input type="radio" name="app" id="charcount" value="charcount" disabled/>
+      <input type="radio" name="app" value="charcount" disabled/>
       <label for="charcount"
         ><a href="{% url 'character_counter:counter' %}" class="icons"
           >📑</a
         ></label
       >
-      <input type="radio" name="app" id="dummytext" value="dummytext" disabled/>
+      <input type="radio" name="app" value="dummytext" disabled/>
       <label for="dummytext"
         ><a href="{% url 'filler_text:filler_text' %}" class="icons"
-          >📕</a
+          >📘</a
+        ></label
+      >
+      <input type="radio" name="app" value="password" disabled/>
+      <label for="password"
+        ><a href="{% url 'passwords_generator:passwords_generator' %}" class="icons"
+          >🔐</a
         ></label
       >
     </header>
