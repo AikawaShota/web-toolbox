@@ -124,15 +124,31 @@ textarea:focus {
   border: none;
   border-radius: 5px;
   background-color: #3d64ed;
-  filter: drop-shadow(0 4px 4px rgba(61, 100, 237, 0.5));
+  filter: drop-shadow(0 4px 2px rgba(61, 100, 237, 0.5));
 
   font-size: 1em;
   font-weight: bold;
   color: #f8f8f8;
   line-height: 1em;
+
+  cursor: pointer;
+}
+
+.primary:hover {
+  transition: all ease 0.1s;
+  background-color: #597af0;
+  filter: drop-shadow(0 4px 4px rgba(89, 122, 240, 0.5));
+}
+
+.primary:active {
+  transition: all ease 0.1s;
+  background-color: #7590f2;
+  filter: drop-shadow(0 4px 4px rgba(89, 122, 240, 0.5));
 }
 
 .secondary {
+  transition: all ease 0.1s;
+
   margin: 0 15px;
   padding: 10px 20px;
   box-sizing: border-box;
@@ -144,6 +160,22 @@ textarea:focus {
   border: solid 1px #272727;
   border-radius: 5px;
   background-color: #f8f8f8;
+
+  cursor: pointer;
+}
+
+.secondary:hover {
+  transition: all ease 0.1s;
+  border: 1px solid #3d64ed;
+  color: #3d64ed;
+  outline: none;
+}
+
+.secondary:active {
+  transform: all ease 0.1s;
+  border: 1px solid #eaeaea;
+  color: #eaeaea;
+  outline: none;
 }
 
 .buttons {
@@ -191,8 +223,12 @@ select {
   appearance: none;
 }
 
-select:focus {
+select:hover {
   border: 1px solid #3d64ed;
+  outline: none;
+}
+
+select:focus {
   outline: none;
 }
 
@@ -242,6 +278,11 @@ input[type="checkbox"] {
   transition: all ease 0.1s;
 }
 
+.checkbox:hover {
+  border: #3d64ed 1px solid;
+  color: #3d64ed;
+}
+
 .checkbox svg {
   width: 18px;
 }
@@ -260,12 +301,23 @@ input[type="checkbox"]:checked + label {
   margin: 0;
 }
 
+.number_field {
+  transition: all ease 0.3s;
+}
+
+.number_field:hover {
+  border: #3d64ed 1px solid;
+}
+
 .number_field:focus {
   border: 1px solid #3d64ed;
+  background-color: #eaeaea;
   outline: none;
 }
 
 input[type="text"] {
+  transition: all ease 0.3s;
+
   width: 150px;
   height: 38px;
 
@@ -285,6 +337,12 @@ input[type="text"] {
 
 input[type="text"]:focus {
   border: 1px solid #3d64ed;
+  background-color: #eaeaea;
+  outline: none;
+}
+
+input[type="text"]:hover {
+  border: 1px solid #3d64ed;
   outline: none;
 }
 
@@ -300,6 +358,14 @@ input[type="text"]:focus {
 .list-icon:visited {
   text-decoration: none;
   color: #272727;
+}
+
+.list-icon h3 {
+  transition: font-size ease 0.3s;
+}
+
+.list-icon:hover h3 {
+  font-size: 96px;
 }
 
 .toolbox_table {
@@ -338,6 +404,11 @@ input[type="radio"]:checked + label {
 
   background-color: #eaeaea !important;
   border: rgba(0, 0, 0, 0.25) 1px solid !important;
-  font-family: 'JetBrains Mono';
+  font-family: "JetBrains Mono";
   font-variant-ligatures: none;
+  cursor: pointer;
+}
+
+.code:hover {
+  border: #3d64ed 1px solid;
 }
