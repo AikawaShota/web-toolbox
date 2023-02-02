@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 
 <script>
-    window.onload = (function () {
+  window.onload = (function () {
     let apps = document.getElementsByName("app");
     apps[2].checked = true;
   })();
@@ -16,9 +16,20 @@
 <div>
   <form action="{% url 'filler_text:filler_text' %}" method="POST">
     {% csrf_token %}
-    <p>
-      {{ form.text }} から {{ form.count }} 文字 ( 空白 {{ form.no_space }} )
-    </p>
+    <table>
+      <tr>
+        <td class="right">引用元</td>
+        <td>{{ form.text }}</td>
+      </tr>
+      <tr>
+        <td class="right">文字数</td>
+        <td>{{ form.count }}</td>
+      </tr>
+      <tr>
+        <td class="right">空白</td>
+        <td>{{ form.no_space }}</td>
+      </tr>
+    </table>
     <section class="buttons">
       <button class="primary" type="submit">生成</button>
       <button class="secondary" onclick="clearText()" type="button">
