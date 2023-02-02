@@ -360,12 +360,16 @@ input[type="text"]:hover {
   color: #272727;
 }
 
-.list-icon h3 {
-  transition: font-size ease 0.3s;
+.list-icon h3, .list-icon p {
+  transition: all ease 0.3s;
 }
 
 .list-icon:hover h3 {
   font-size: 96px;
+}
+
+.list-icon:hover p {
+  color: #3d64ed;
 }
 
 .toolbox_table {
@@ -411,4 +415,17 @@ input[type="radio"]:checked + label {
 
 .code:hover {
   border: #3d64ed 1px solid;
+}
+
+.github {
+  transition: all ease 0.3s;
+  width: 24px;
+  height: fit;
+  position: absolute;
+  bottom: 24px;
+}
+
+.github:hover {
+  fill: #3d64ed;
+  filter: drop-shadow(0 4px 4px rgba(61, 100, 237, 0.5));
 }
