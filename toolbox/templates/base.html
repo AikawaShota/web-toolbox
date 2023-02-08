@@ -6,12 +6,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta
-            name="viewport"
-            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <link rel="stylesheet" href="{% static 'css/sanitize.css' %}"/>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="{% static 'css/sanitize.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <title>{% block title %}{% endblock title %}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,28 +23,38 @@
 
   <body>
     <header class="sidebar">
-      <input type="radio" name="app" value="top" disabled/>
+      <input type="radio" name="app" value="top" disabled />
       <label for="top"
-        ><a href="{% url 'list:index' %}" class="icons">🧰</a></label
+        ><a href="{% url 'list:index' %}" class="icons" title="Top">🧰</a></label
       >
-      <input type="radio" name="app" value="charcount" disabled/>
+      <input type="radio" name="app" value="charcount" disabled />
       <label for="charcount"
-        ><a href="{% url 'character_counter:counter' %}" class="icons"
+        ><a href="{% url 'character_counter:counter' %}" class="icons" title="Character Counter"
           >📑</a
         ></label
       >
-      <input type="radio" name="app" value="dummytext" disabled/>
+      <input type="radio" name="app" value="dummytext" disabled />
       <label for="dummytext"
-        ><a href="{% url 'filler_text:filler_text' %}" class="icons"
+        ><a href="{% url 'filler_text:filler_text' %}" class="icons" title="Dummy Text Generator"
           >📘</a
         ></label
       >
-      <input type="radio" name="app" value="password" disabled/>
+      <input type="radio" name="app" value="password" disabled />
       <label for="password"
-        ><a href="{% url 'passwords_generator:passwords_generator' %}" class="icons"
+        ><a
+          href="{% url 'passwords_generator:passwords_generator' %}"
+          class="icons" title="Password Generator"
           >🔐</a
         ></label
       >
+      <a class="github" href="https://github.com/AikawaShota/web-toolbox" target="_blank" rel="noreferrer noopener">
+        <svg viewBox="0 0 635 619" xmlns="http://www.w3.org/2000/svg">
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M317.5 0C142.081 0 0 142.004 0 317.328C0 457.746 90.8844 576.348 217.091 618.394C232.966 621.17 238.919 611.651 238.919 603.321C238.919 595.784 238.522 570.795 238.522 544.218C158.75 558.895 138.112 524.782 131.762 506.932C128.191 497.809 112.713 469.646 99.2188 462.11C88.1062 456.16 72.2312 441.483 98.8219 441.087C123.825 440.69 141.684 464.093 147.638 473.613C176.213 521.609 221.853 508.122 240.109 499.792C242.888 479.166 251.222 465.283 260.35 457.35C189.706 449.416 115.888 422.047 115.888 300.669C115.888 266.159 128.191 237.6 148.431 215.387C145.256 207.453 134.144 174.927 151.606 131.295C151.606 131.295 178.197 122.965 238.919 163.821C264.319 156.681 291.306 153.111 318.294 153.111C345.281 153.111 372.269 156.681 397.669 163.821C458.391 122.568 484.981 131.295 484.981 131.295C502.444 174.927 491.331 207.453 488.156 215.387C508.397 237.6 520.7 265.763 520.7 300.669C520.7 422.443 446.484 449.416 375.841 457.35C387.35 467.266 397.272 486.306 397.272 516.055C397.272 558.498 396.875 592.611 396.875 603.321C396.875 611.651 402.828 621.567 418.703 618.394C544.116 576.348 635 457.35 635 317.328C635 142.004 492.919 0 317.5 0Z"
+          /></svg
+      ></a>
     </header>
 
     <main>{% block content %} {% endblock %}</main>
